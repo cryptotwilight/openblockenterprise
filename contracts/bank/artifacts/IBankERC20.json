@@ -1,0 +1,248 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"deposit(uint256,address)": "6e553f65",
+			"findDeposit(uint256)": "30937694",
+			"findWithDrawal(uint256)": "81b63c0b",
+			"getBankBalance(address)": "04cdb171",
+			"getSupportedCurrencyContracts()": "1a39e820",
+			"getTotalBankBalance(address)": "4d4ec53d",
+			"withdraw(uint256,address,address)": "b460af94"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_erc20ContractAddress",
+					"type": "address"
+				}
+			],
+			"name": "deposit",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_depositReference",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_depositReference",
+					"type": "uint256"
+				}
+			],
+			"name": "findDeposit",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "_payer",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_date",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_erc20CurrencyContract",
+					"type": "address"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_withdrawalReference",
+					"type": "uint256"
+				}
+			],
+			"name": "findWithDrawal",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "_withdrawer",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_date",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_erc20CurrencyContract",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_payoutAddress",
+					"type": "address"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_erc20CurrencyContract",
+					"type": "address"
+				}
+			],
+			"name": "getBankBalance",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_balance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_date",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getSupportedCurrencyContracts",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "_erc20CurrencyContracts",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_erc20CurrencyContract",
+					"type": "address"
+				}
+			],
+			"name": "getTotalBankBalance",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_balance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_date",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_erc20ContractAddress",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_payoutAddress",
+					"type": "address"
+				}
+			],
+			"name": "withdraw",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_withdrawalReference",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

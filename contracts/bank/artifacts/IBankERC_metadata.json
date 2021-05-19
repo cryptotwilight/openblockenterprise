@@ -1,0 +1,93 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_erc20ContractAddress",
+						"type": "address"
+					}
+				],
+				"name": "depositERC20",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_depositReference",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_erc20ContractAddress",
+						"type": "address"
+					}
+				],
+				"name": "depositERC777",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_depositReference",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bank/IBank.sol": "IBankERC"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bank/IBank.sol": {
+			"keccak256": "0x63e07f565580b524f183c4819d4d0bfd0fac647dfdb035d1b74f7c440e70fd9f",
+			"urls": [
+				"bzz-raw://68f558f11c9c8dc27b8ce8bf84987a377ce344dc81bae7f6b096cd70317e6cc1",
+				"dweb:/ipfs/QmVtvXK7By5BCFeeD19b9G5MHeyoSmrMDLX1Vf8UZpnjbj"
+			]
+		}
+	},
+	"version": 1
+}

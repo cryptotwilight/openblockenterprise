@@ -1,0 +1,197 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"deposit(uint256)": "b6b55f25",
+			"findDeposit(uint256)": "30937694",
+			"findWithDrawal(uint256)": "81b63c0b",
+			"getBankBalance()": "7b83b50b",
+			"getCurrencyContract()": "de494685",
+			"withdraw(uint256,address)": "00f714ce"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				}
+			],
+			"name": "deposit",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_depositReference",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_depositReference",
+					"type": "uint256"
+				}
+			],
+			"name": "findDeposit",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "_payer",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_date",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_withdrawalReference",
+					"type": "uint256"
+				}
+			],
+			"name": "findWithDrawal",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "_withdrawer",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_date",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_payoutAddress",
+					"type": "address"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getBankBalance",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_balance",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_date",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getCurrencyContract",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "_currencyContract",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address",
+					"name": "_payoutAddress",
+					"type": "address"
+				}
+			],
+			"name": "withdraw",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "_withdrawalReference",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

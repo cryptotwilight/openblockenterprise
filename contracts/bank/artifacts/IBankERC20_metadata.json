@@ -1,0 +1,255 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_erc20ContractAddress",
+						"type": "address"
+					}
+				],
+				"name": "deposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_depositReference",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_depositReference",
+						"type": "uint256"
+					}
+				],
+				"name": "findDeposit",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_payer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_erc20CurrencyContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_withdrawalReference",
+						"type": "uint256"
+					}
+				],
+				"name": "findWithDrawal",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_withdrawer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_erc20CurrencyContract",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_payoutAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_erc20CurrencyContract",
+						"type": "address"
+					}
+				],
+				"name": "getBankBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSupportedCurrencyContracts",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "_erc20CurrencyContracts",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_erc20CurrencyContract",
+						"type": "address"
+					}
+				],
+				"name": "getTotalBankBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_erc20ContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_payoutAddress",
+						"type": "address"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_withdrawalReference",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"deposit(uint256,address)": {
+					"notice": "this will deposit the given amount into the bank and issue a deposit reference "
+				},
+				"findDeposit(uint256)": {
+					"notice": "this will find the deposit linked to the given deposit reference "
+				},
+				"findWithDrawal(uint256)": {
+					"notice": "this will find the withdrawal linked to the given withdrawal reference "
+				},
+				"getBankBalance(address)": {
+					"notice": "this will get the bank balance on the given ERC20 contract "
+				},
+				"getSupportedCurrencyContracts()": {
+					"notice": "this will return the ERC20 currency that this bank supports. It will return address(0) for ETH "
+				},
+				"getTotalBankBalance(address)": {
+					"notice": "this will get the total bank balance across all supported erc20 currency contracts converted into the provided  erc20CurrencyContract. NOTE: this is an expensive operation "
+				},
+				"withdraw(uint256,address,address)": {
+					"notice": "this will withdraw the given amount from the bank and issue a withdrawal reference "
+				}
+			},
+			"notice": "The IBankERC20 interface provides a way for a dApp / blockchain business to manage it's funds on chain without sending the funds  to a wallet or keeping them in the operational contract. This interface supports multi-currency ERC20 interaction ",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bank/IBankERC20.sol": "IBankERC20"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bank/IBankERC20.sol": {
+			"keccak256": "0xab5e0288fe4baaa0e81b47732eb82f660c3376e5d03b7eb2c164447f84812890",
+			"urls": [
+				"bzz-raw://dadf085ee2c7639579249a51798ad20bbc3e98a2320a384d22f197c5dedcc068",
+				"dweb:/ipfs/QmWqEjQm3V2835RHjBanbrtRdoRdYu74t8duwTDpm6g9hq"
+			]
+		}
+	},
+	"version": 1
+}

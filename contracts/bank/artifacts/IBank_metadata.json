@@ -1,0 +1,202 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_depositReference",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_depositReference",
+						"type": "uint256"
+					}
+				],
+				"name": "findDeposit",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_payer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_withdrawalReference",
+						"type": "uint256"
+					}
+				],
+				"name": "findWithDrawal",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_withdrawer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_payoutAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBankBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_date",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCurrencyContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_currencyContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_payoutAddress",
+						"type": "address"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_withdrawalReference",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"deposit(uint256)": {
+					"notice": "this will deposit the given amount into the bank and issue a deposit reference "
+				},
+				"findDeposit(uint256)": {
+					"notice": "this will find the deposit linked to the given deposit reference "
+				},
+				"findWithDrawal(uint256)": {
+					"notice": "this will find the withdrawal linked to the given withdrawal reference "
+				},
+				"getBankBalance()": {
+					"notice": "this will return the balance of the bank at the given point in time "
+				},
+				"getCurrencyContract()": {
+					"notice": "this will return the ERC20 currency that this bank supports. It will return address(0) for ETH "
+				},
+				"withdraw(uint256,address)": {
+					"notice": "this will withdraw the given amount from the bank and issue a withdrawal reference "
+				}
+			},
+			"notice": "The IBank interface provides a way for a dApp / blockchain business to manage it's funds on chain without sending the funds  to a wallet or keeping them in the operational contract. This interface is for single currency support.  NOTE: currency contract is set once",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bank/IBank.sol": "IBank"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bank/IBank.sol": {
+			"keccak256": "0xc0cfc360c606b3a4ddde4dbef6ef761ed829320a272d46df9add7b3d9132e37c",
+			"urls": [
+				"bzz-raw://c4449abaa653525e6e93875797656624003731875b28f0197b2dfd64407fa933",
+				"dweb:/ipfs/QmUJHZchWNzmqemewoiCUQGiaYUBiCgLfcj3JGMFYFWvub"
+			]
+		}
+	},
+	"version": 1
+}
