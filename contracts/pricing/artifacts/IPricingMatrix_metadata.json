@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getCurrencyContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_currencyContract",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_item",
+						"type": "string"
+					}
+				],
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getCurrencyContract()": {
+					"notice": "this returns the currency contract of this pricing matrix"
+				},
+				"getPrice(string)": {
+					"notice": "this returns the price of the item "
+				}
+			},
+			"notice": "The Pricing Matrix interface provides a simple way for dApps to dynamic on chain item pricing ",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/pricing/IPricingMatrix.sol": "IPricingMatrix"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/pricing/IPricingMatrix.sol": {
+			"keccak256": "0x52e5d303fbed6e34b9c9d1f6e59247e1b7a415f56aa3db6b863f88d47cd407f7",
+			"urls": [
+				"bzz-raw://f411bd19e106ecc144ac15aff112fcc195d631e8027687a23663df9227d82780",
+				"dweb:/ipfs/QmVT7PgrtsEKW5toP47fdkD9isTcV22LfqKTr8apgz8XFZ"
+			]
+		}
+	},
+	"version": 1
+}
