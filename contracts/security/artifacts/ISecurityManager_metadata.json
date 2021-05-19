@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "isAllowed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_isAllowed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isAllowedRevert",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_isAllowed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"isAllowed()": {
+					"notice": "This operation returns whether the caller can execute the given action as per the system  This is mainly for \"soft\" security"
+				},
+				"isAllowedRevert()": {
+					"notice": "this operation returns whether  the caller can execute the given action as per the system  this operation will revert. This is mainly for \"hard\" security"
+				}
+			},
+			"notice": "This interface represents the security manager that is integrated into a project's smart contracts to provide  a central point from which functionality can be enabled or disabled in a crisis situation. ",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/security/ISecurityManager.sol": "ISecurityManager"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/security/ISecurityManager.sol": {
+			"keccak256": "0xfe6cba0872b2d3a4353b5d8511882e8ce493048516cb853fbc73dedfc397b612",
+			"urls": [
+				"bzz-raw://73649359ef8a7c530df735bf9b217b48fcf2571b1579dad94bec635182455097",
+				"dweb:/ipfs/QmdcXnVHD4ZCSpociHSPhYn4NkHMtbjnT4y9j92cXREzxT"
+			]
+		}
+	},
+	"version": 1
+}
