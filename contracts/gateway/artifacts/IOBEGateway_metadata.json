@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_componentName",
+						"type": "string"
+					}
+				],
+				"name": "getComponentAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_componentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_version",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "This interface returns the latest registered component address for use in your dApp",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/gateway/IOBEGateway.sol": "IOBEGateway"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/gateway/IOBEGateway.sol": {
+			"keccak256": "0xc14d19cfa3e424e156802796882641fe785c669cf2c90d61afce74c6606c3a7a",
+			"urls": [
+				"bzz-raw://d400e4e20a823528a3829d6a7064b59f3d09f0235e1f125c1a72b2ca869a69f0",
+				"dweb:/ipfs/QmRKQDoEANPPuaDoNotoXJGyyWC6gNzBqv3bipP8MTK3E3"
+			]
+		}
+	},
+	"version": 1
+}
